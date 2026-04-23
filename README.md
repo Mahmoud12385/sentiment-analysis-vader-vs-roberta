@@ -1,54 +1,79 @@
-# 📊 Sentiment Analysis: VADER vs RoBERTa
+# 🧠 Sentiment Analysis: VADER vs RoBERTa
 
-## 📖 Overview
-This project performs sentiment analysis on customer reviews using two approaches:
-- VADER (rule-based)
-- RoBERTa (transformer-based deep learning model)
+## 🚀 Live Demo
+👉 Try the app here:  
+https://sentiment-analysis-vader-vs-roberta-uccfvmgycjrbjhrsxa4noq.streamlit.app/
 
-The goal is to compare their performance and understand differences between classical NLP and modern deep learning approaches.
+---
+
+## 📖 Project Overview
+This project is a Natural Language Processing (NLP) application that performs sentiment analysis on text data using two different approaches:
+
+- 🔹 **VADER (Valence Aware Dictionary and sEntiment Reasoner)** – rule-based sentiment analysis
+- 🔹 **RoBERTa (Transformer-based model)** – deep learning approach using HuggingFace Transformers
+
+The goal is to compare classical NLP methods with modern transformer-based models on real-world data.
 
 ---
 
 ## 🧠 Models Used
 
 ### 🔹 VADER
-- Lexicon and rule-based sentiment analysis
-- Works well for short texts (e.g., social media)
+- Rule-based sentiment analysis model
+- Works well on short texts like reviews and social media
+- Outputs:
+  - Positive
+  - Neutral
+  - Negative
+  - Compound score (-1 to +1)
 
 ### 🔹 RoBERTa
 - Pretrained transformer model
-- Context-aware sentiment understanding
-- Model: `cardiffnlp/twitter-roberta-base-sentiment`
+- Context-aware and more accurate
+- Model used:
+  - `cardiffnlp/twitter-roberta-base-sentiment`
 
 ---
 
 ## 📊 Dataset
-- Reviews dataset (first 500 samples used)
+- Amazon Fine Food Reviews Dataset (from Kaggle)
 - Contains:
-  - Text
-  - Score (1–5 stars)
+  - Text reviews
+  - Star ratings (1–5)
+- Due to size limitations, only a sample of the dataset is used in the app.
 
 ---
 
-## ⚙️ Workflow
+## ⚙️ Features
 
-1. Data Loading & Cleaning  
-2. Exploratory Data Analysis (EDA)  
-3. VADER Sentiment Scoring  
-4. RoBERTa Sentiment Prediction  
-5. Merge Results  
-6. Model Comparison (Visualization)
-
----
-
-## 📈 Key Visualizations
-- Sentiment distribution by star rating
-- Average compound score vs rating
-- Pairplot comparison between models
+- ✍️ Input custom text for analysis
+- 📊 Compare VADER vs RoBERTa results
+- 📈 Visual bar chart comparison
+- 🧠 Final sentiment prediction
+- ⚡ Fast real-time inference
 
 ---
 
-## 🚀 Installation
+## 🛠️ Tech Stack
+
+- Python 🐍
+- Streamlit 🎈
+- PyTorch 🔥
+- Transformers 🤗
+- NLTK 📚
+- Pandas & NumPy 📊
+- Matplotlib & Seaborn 📉
+
+---
+
+## 🚀 How to Run Locally
 
 ```bash
+# Clone the repository
+git clone https://github.com/your-username/sentiment-analysis-vader-vs-roberta.git
+
+# Install dependencies
 pip install -r requirements.txt
+
+# Run Streamlit app
+streamlit run app.py
